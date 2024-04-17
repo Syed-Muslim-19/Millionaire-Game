@@ -1,0 +1,211 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.App {
+  background-color: #020230;
+  color: white;
+  height: 100vh;
+  display: flex;
+}
+.main {
+  width: 80%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000),
+    url("./media/background.jpg") center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  height: 50%;
+  position: relative;
+}
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+}
+.score {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  right: 10%;
+  background-color: #000000b8;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+.bottom {
+  height: 50%;
+}
+.trivia {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.question {
+  width: 82%;
+  background: linear-gradient(#100241, black);
+  border: 2px solid white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.answers {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.answer {
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(black, #100241);
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 10px 20px 10px;
+}
+.answer:hover,
+.answer.active {
+  background: rgba(0, 0, 205, 0.776);
+  font-weight: 600;
+}
+.answer.correct {
+  animation: corrects 2s ease forwards;
+}
+.answer.wrong {
+  animation: wrongs 2s ease forwards;
+}
+@keyframes corrects {
+  0%,
+  22%,
+  44%,
+  66%,
+  88% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    background: linear-gradient(black, #100241);
+  }
+  89%,
+  100% {
+    background: green;
+  }
+}
+@keyframes wrongs {
+  0%,
+  22%,
+  44%,
+  66%,
+  88% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    background: linear-gradient(black, #100241);
+  }
+  89%,
+  100% {
+    background: red;
+  }
+}
+.pyramid {
+  width: 20%;
+}
+.moneylist {
+  list-style: none;
+  text-align: left;
+  margin-top: 30%;
+}
+.moneylistitem {
+  margin-top: 15px;
+}
+.moneylistitemnumber {
+  display: none;
+}
+.moneylistitem.active {
+  background-color: rgba(195, 251, 255, 0.379);
+  width: max-content;
+  padding: 0px 20px 0px 20px;
+  border-radius: 15px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-weight: 700;
+  background-color: #0000003e;
+}
+@media (max-width: 427px) {
+  .pyramid {
+    display: none;
+  }
+  .main {
+    width: 100%;
+  }
+}
+.start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #00000076;
+  padding: 50px;
+  border-radius: 15px;
+}
+.sinput {
+  margin-bottom: 10px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 6px;
+  border: none;
+  transition: 0.5s;
+}
+.sinput:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+.Button {
+  background-color: blue;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  transition: 0.5s;
+}
+.Button:hover {
+  transition: 0.5s;
+  background-color: white;
+  color: blue;
+}
+.Button:active {
+  scale: 0.9;
+  transition: 0.5s;
+}
